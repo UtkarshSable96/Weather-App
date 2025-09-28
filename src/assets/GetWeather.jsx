@@ -10,6 +10,7 @@ function GetWeather()
 {
     const [weather,setWeather]=useState({})
     const [city,setCity]=useState("")
+
     let apikey = import.meta.env.VITE_WEATHER_API_KEY;
     function getinfo() 
     {
@@ -32,7 +33,7 @@ function GetWeather()
     <div>
         <div className="c">
             <input type="text" placeholder='Enter City' value={city} onChange={(e)=>setCity(e.target.value)} />
-            <button onClick={()=>getinfo()}><FaSearch/></button>
+            <button onClick={()=> getinfo()}><FaSearch/></button>
         </div>
         {
             weather && weather.weather?(
