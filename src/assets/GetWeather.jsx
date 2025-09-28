@@ -10,7 +10,7 @@ function GetWeather()
 {
     const [weather,setWeather]=useState({})
     const [city,setCity]=useState("")
-    let apikey="98a81ba6967f1b3760e0e13c058fa2ff"
+    let apikey="dummy_key"
     function getinfo() 
     {
        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`).then((res1)=>{
